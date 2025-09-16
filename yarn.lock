@@ -2848,6 +2848,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@chainlink/blocksize-capital-state-adapter@workspace:packages/sources/blocksize-capital-state":
+  version: 0.0.0-use.local
+  resolution: "@chainlink/blocksize-capital-state-adapter@workspace:packages/sources/blocksize-capital-state"
+  dependencies:
+    "@chainlink/external-adapter-framework": "npm:2.7.0"
+    "@sinonjs/fake-timers": "npm:9.1.2"
+    "@types/jest": "npm:^29.5.14"
+    "@types/node": "npm:22.14.1"
+    "@types/sinonjs__fake-timers": "npm:8.1.5"
+    "@types/ws": "npm:^8.18.1"
+    nock: "npm:13.5.6"
+    tslib: "npm:2.4.1"
+    typescript: "npm:5.8.3"
+    ws: "npm:^8.18.3"
+  languageName: unknown
+  linkType: soft
+
 "@chainlink/blockstream-adapter@workspace:packages/sources/blockstream":
   version: 0.0.0-use.local
   resolution: "@chainlink/blockstream-adapter@workspace:packages/sources/blockstream"
@@ -13248,6 +13265,15 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10/5236b6c54817bdf17674337db5776bb34a876b77a90d885d0f70084c9d453cc2f21703207cc1147d33a9e49a4306773830fbade4729b01ffe33ef0c82cd4c701
+  languageName: node
+  linkType: hard
+
+"@types/ws@npm:^8.18.1":
+  version: 8.18.1
+  resolution: "@types/ws@npm:8.18.1"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10/1ce05e3174dcacf28dae0e9b854ef1c9a12da44c7ed73617ab6897c5cbe4fccbb155a20be5508ae9a7dde2f83bd80f5cf3baa386b934fc4b40889ec963e94f3a
   languageName: node
   linkType: hard
 
@@ -32962,7 +32988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:8.18.3":
+"ws@npm:8.18.3, ws@npm:^8.18.3":
   version: 8.18.3
   resolution: "ws@npm:8.18.3"
   peerDependencies:

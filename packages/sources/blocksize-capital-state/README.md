@@ -12,15 +12,6 @@
 
 ## Technical Notes
 
-### WebSocket Endpoint
-
-- **Default**: `wss://blocksize.dev/marketdata/v1/ws` (development)
-- **Alternative**: `wss://data.blocksize.capital/marketdata/v1/ws` (production)
-
-### Logger Configuration
-
-Custom logger included; can be replaced with `makeLogger` from `@chainlink/external-adapter-framework/util`
-
 ### Timestamp Recording
 
 The adapter preserves the provider's timestamp (`timestamp`, previously `block_time`) as `providerIndicatedTimeUnixMs` alongside Chainlink's processing timestamps for data traceability.
@@ -146,23 +137,27 @@ API_KEY="your-api-key-here" TOKEN="your-token-here" yarn start blocksize-capital
 
 The adapter will start on port `8080` by default.
 
-### Manual Testing Script
+### Running Tests
 
-A test script (`/test/test-ws.sh`) is included for development and debugging purposes. This script demonstrates basic adapter functionality with sample requests.
+#### Integration Tests
 
-**Prerequisites:**
-
-- Adapter must be built and running (see above)
-- Required environment variables must be set (`API_KEY`, `TOKEN`)
-
-**Usage:**
+Integration tests verify the complete adapter functionality including WebSocket connections and message handling with mocked external services.
 
 ```bash
-chmod +x test/test-ws.sh
-cd test && ./test-ws.sh
+yarn test test/integration/adapter.test.ts
 ```
 
-**Notes:**
+#### Unit Tests
 
-- This script is intended for local development and debugging only
-- If your adapter runs on a different port, update the URL in `test-ws.sh` accordingly (default: `http://localhost:8080`)
+Unit tests provide comprehensive coverage for utility functions including data processing, authentication, and error handling.
+
+```bash
+yarn test test/unit/utils.test.ts
+```
+
+**Test Coverage:**
+
+- `buildBlocksizeWebsocketAuthMessage` - Authentication message construction
+- `buildBlocksizeWebsocketTickersMessage` - Subscription/unsubscription messages
+- `processStateData` - Data validation, parsing, and error handling
+- `blocksizeStateWebsocketOpenHandler` - WebSocket authentication flow

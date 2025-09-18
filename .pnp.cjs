@@ -295,6 +295,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/sources/blocksize-capital"\
     },\
     {\
+      "name": "@chainlink/blocksize-capital-state-adapter",\
+      "reference": "workspace:packages/sources/blocksize-capital-state"\
+    },\
+    {\
       "name": "@chainlink/blockstream-adapter",\
       "reference": "workspace:packages/sources/blockstream"\
     },\
@@ -1018,6 +1022,7 @@ const RAW_RUNTIME_STATE =
     ["@chainlink/blockchair-adapter", ["workspace:packages/sources/blockchair"]],\
     ["@chainlink/blockcypher-adapter", ["workspace:packages/sources/blockcypher"]],\
     ["@chainlink/blocksize-capital-adapter", ["workspace:packages/sources/blocksize-capital"]],\
+    ["@chainlink/blocksize-capital-state-adapter", ["workspace:packages/sources/blocksize-capital-state"]],\
     ["@chainlink/blockstream-adapter", ["workspace:packages/sources/blockstream"]],\
     ["@chainlink/bob-adapter", ["workspace:packages/sources/bob"]],\
     ["@chainlink/bravenewcoin-adapter", ["workspace:packages/sources/bravenewcoin"]],\
@@ -5598,6 +5603,25 @@ const RAW_RUNTIME_STATE =
           ["nock", "npm:13.5.6"],\
           ["tslib", "npm:2.8.1"],\
           ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@chainlink/blocksize-capital-state-adapter", [\
+      ["workspace:packages/sources/blocksize-capital-state", {\
+        "packageLocation": "./packages/sources/blocksize-capital-state/",\
+        "packageDependencies": [\
+          ["@chainlink/blocksize-capital-state-adapter", "workspace:packages/sources/blocksize-capital-state"],\
+          ["@chainlink/external-adapter-framework", "npm:2.7.0"],\
+          ["@sinonjs/fake-timers", "npm:9.1.2"],\
+          ["@types/jest", "npm:29.5.14"],\
+          ["@types/node", "npm:22.14.1"],\
+          ["@types/sinonjs__fake-timers", "npm:8.1.5"],\
+          ["@types/ws", "npm:8.18.1"],\
+          ["nock", "npm:13.5.6"],\
+          ["tslib", "npm:2.4.1"],\
+          ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"],\
+          ["ws", "virtual:bdc244f853fb22ebac7b81f50917f9b470cc7237095ba56eae0d97416db6fb294de2dfb5b3ab323b141006d4a3cdee50bddf11794531ca39f6010716210e02c8#npm:8.18.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -17868,6 +17892,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-ws-npm-7.4.7-d0c95c0958-5236b6c548.zip/node_modules/@types/ws/",\
         "packageDependencies": [\
           ["@types/ws", "npm:7.4.7"],\
+          ["@types/node", "npm:22.9.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:8.18.1", {\
+        "packageLocation": "./.yarn/cache/@types-ws-npm-8.18.1-61dc106ff0-1ce05e3174.zip/node_modules/@types/ws/",\
+        "packageDependencies": [\
+          ["@types/ws", "npm:8.18.1"],\
           ["@types/node", "npm:22.9.1"]\
         ],\
         "linkType": "HARD"\
